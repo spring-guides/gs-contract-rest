@@ -14,14 +14,16 @@ apply plugin: 'groovy'
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
+apply plugin: 'maven'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'spring-cloud-contract'
 
 
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
 jar {
 	baseName = 'contract-rest-service'
-	version = '0.0.1-SNAPSHOT'
 }
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
