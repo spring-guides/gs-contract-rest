@@ -22,7 +22,7 @@ apply plugin: 'spring-cloud-contract'
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-jar {
+bootJar {
 	baseName = 'contract-rest-service'
 }
 sourceCompatibility = 1.8

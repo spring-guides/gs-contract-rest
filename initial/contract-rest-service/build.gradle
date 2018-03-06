@@ -19,7 +19,7 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: 'spring-cloud-contract'
 
 
-jar {
+bootJar {
 	baseName = 'contract-rest-service'
 	version = '0.0.1-SNAPSHOT'
 }
