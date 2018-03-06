@@ -1,6 +1,6 @@
 buildscript {
 	ext { 
-		springBootVersion = '1.5.10.RELEASE' 
+		springBootVersion = '2.0.0.RELEASE' 
 		verifierVersion = '1.2.1.RELEASE'
 	}
 	repositories { mavenCentral() }
@@ -36,18 +36,19 @@ dependencies {
 
 dependencyManagement {
 	imports {
-		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Edgware.SR2"
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Finchley.M8"
 	}
 }
 
+repositories {
+    maven {
+        url 'https://repo.spring.io/libs-milestone'
+    }
+}
 
 contracts {
 	packageWithBaseClasses = 'hello'
 	baseClassMappings {
 		baseClassMapping(".*hello.*", "hello.BaseClass")
 	}
-}
-
-task wrapper(type: Wrapper) {
-	gradleVersion = '4.3.1'
 }
