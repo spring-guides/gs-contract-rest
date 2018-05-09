@@ -1,6 +1,6 @@
 buildscript {
 	ext { 
-		springBootVersion = '2.0.1.RELEASE' 
+		springBootVersion = '2.0.2.RELEASE' 
 		verifierVersion = '1.2.1.RELEASE'
 	}
 	repositories { mavenCentral() }
@@ -36,7 +36,7 @@ dependencies {
 
 dependencyManagement {
 	imports {
-		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Finchley.M9"
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Finchley.RC1"
 	}
 }
 
