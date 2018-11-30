@@ -40,12 +40,6 @@ dependencyManagement {
 	}
 }
 
-repositories {
-    maven {
-        url 'https://repo.spring.io/libs-milestone'
-    }
-}
-
 contracts {
 	packageWithBaseClasses = 'hello'
 	baseClassMappings {
