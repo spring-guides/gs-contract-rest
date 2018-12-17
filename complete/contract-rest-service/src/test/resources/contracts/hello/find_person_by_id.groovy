@@ -9,7 +9,7 @@ Contract.make {
 	}
 
 	response {
-		status 200
+		status OK()
 		headers {
 			contentType applicationJson()
 		}
