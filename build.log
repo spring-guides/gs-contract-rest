@@ -1,0 +1,460 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< org.springframework.guide:spring-guides >---------------
+[INFO] Building Spring Guides 1.0.0.BUILD-SNAPSHOT
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ spring-guides ---
+[INFO] 
+[INFO] --- exec-maven-plugin:1.6.0:exec (Run tests) @ spring-guides ---
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] contract-rest-service                                              [jar]
+[INFO] contract-rest-client                                               [jar]
+[INFO] gs-contract-rest                                                   [pom]
+[INFO] 
+[INFO] -----------------< com.example:contract-rest-service >------------------
+[INFO] Building contract-rest-service 0.0.1-SNAPSHOT                      [1/3]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ contract-rest-service ---
+[INFO] Deleting /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ contract-rest-service ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ contract-rest-service ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 4 source files to /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/target/classes
+[INFO] 
+[INFO] --- spring-cloud-contract-maven-plugin:2.1.1.RELEASE:generateTests (default-generateTests) @ contract-rest-service ---
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.codehaus.groovy.reflection.CachedClass (file:/home/marcin/.m2/repository/org/codehaus/groovy/groovy/2.4.15/groovy-2.4.15.jar) to method java.lang.Object.finalize()
+WARNING: Please consider reporting this to the maintainers of org.codehaus.groovy.reflection.CachedClass
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Generating server tests source code for Spring Cloud Contract Verifier contract verification
+[INFO] Will use contracts provided in the folder [/home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/src/test/resources/contracts]
+[INFO] Directory with contract is present at [/home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/src/test/resources/contracts]
+[INFO] Test Source directory: /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/target/generated-test-sources/contracts added.
+[INFO] Using [hello.BaseClass] as base class for test classes, [null] as base package for tests, [null] as package with base classes, base class mappings []
+[INFO] Creating new class file [/home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/target/generated-test-sources/contracts/hello/HelloTest.java]
+[INFO] Generated 1 test classes.
+[INFO] 
+[INFO] --- spring-cloud-contract-maven-plugin:2.1.1.RELEASE:convert (default-convert) @ contract-rest-service ---
+[INFO] Will use contracts provided in the folder [/home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/src/test/resources/contracts]
+[INFO] Copying Spring Cloud Contract Verifier contracts to [/home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/target/stubs/META-INF/com.example/contract-rest-service/0.0.1-SNAPSHOT/contracts]. Only files matching [.*] pattern will end up in the final JAR with stubs.
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Converting from Spring Cloud Contract Verifier contracts to WireMock stubs mappings
+[INFO]      Spring Cloud Contract Verifier contracts directory: /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/src/test/resources/contracts
+[INFO] Stub Server stubs mappings directory: /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/target/stubs/META-INF/com.example/contract-rest-service/0.0.1-SNAPSHOT/mappings
+[INFO] Creating new stub [/home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/target/stubs/META-INF/com.example/contract-rest-service/0.0.1-SNAPSHOT/mappings/hello/find_person_by_id.json]
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ contract-rest-service ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] skip non existing resourceDirectory /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/target/generated-test-resources/contracts
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ contract-rest-service ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ contract-rest-service ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running hello.HelloTest
+18:10:07.900 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class hello.HelloTest]
+18:10:07.905 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+18:10:07.910 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+18:10:07.925 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [hello.HelloTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+18:10:07.937 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [hello.HelloTest], using SpringBootContextLoader
+18:10:07.940 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [hello.HelloTest]: class path resource [hello/HelloTest-context.xml] does not exist
+18:10:07.940 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [hello.HelloTest]: class path resource [hello/HelloTestContext.groovy] does not exist
+18:10:07.940 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [hello.HelloTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+18:10:07.984 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [hello.HelloTest]
+18:10:08.061 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [hello.HelloTest]: using defaults.
+18:10:08.061 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+18:10:08.068 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/TransactionDefinition]
+18:10:08.069 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+18:10:08.069 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7f284218, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@407a7f2a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4ea5b703, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2a7ed1f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3fa247d1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2cb2fc20, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4f4c4b1a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@723e88f9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5f0fd5a0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@64e7619d]
+18:10:08.070 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.HelloTest]
+18:10:08.071 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.HelloTest]
+18:10:08.072 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.HelloTest]
+18:10:08.072 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.HelloTest]
+18:10:08.073 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.HelloTest]
+18:10:08.073 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.HelloTest]
+18:10:08.076 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@1c39680d testClass = HelloTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@62833051 testClass = HelloTest, locations = '{}', classes = '{class hello.ContractRestServiceApplication, class hello.ContractRestServiceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@67080771, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@696da30b, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@189db0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@932bc4a, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4a7f959b], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+18:10:08.077 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.HelloTest]
+18:10:08.077 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.HelloTest]
+18:10:08.093 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.4.RELEASE)
+
+2019-04-29 18:10:08.378  INFO 20167 --- [           main] hello.HelloTest                          : Starting HelloTest on marcin-Precision-5520 with PID 20167 (started by marcin in /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service)
+2019-04-29 18:10:08.379  INFO 20167 --- [           main] hello.HelloTest                          : No active profile set, falling back to default profiles: default
+2019-04-29 18:10:10.138  INFO 20167 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-29 18:10:10.408  INFO 20167 --- [           main] hello.HelloTest                          : Started HelloTest in 2.309 seconds (JVM running for 2.933)
+2019-04-29 18:10:10.604  INFO 20167 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-04-29 18:10:10.604  INFO 20167 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-04-29 18:10:10.605  INFO 20167 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.17 s - in hello.HelloTest
+2019-04-29 18:10:10.948  INFO 20167 --- [       Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- spring-cloud-contract-maven-plugin:2.1.1.RELEASE:generateStubs (default-generateStubs) @ contract-rest-service ---
+[INFO] Files matching this pattern will be excluded from stubs generation []
+[INFO] Building jar: /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/target/contract-rest-service-0.0.1-SNAPSHOT-stubs.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ contract-rest-service ---
+[INFO] Building jar: /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/target/contract-rest-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.4.RELEASE:repackage (repackage) @ contract-rest-service ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ contract-rest-service ---
+[INFO] Installing /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/target/contract-rest-service-0.0.1-SNAPSHOT.jar to /home/marcin/.m2/repository/com/example/contract-rest-service/0.0.1-SNAPSHOT/contract-rest-service-0.0.1-SNAPSHOT.jar
+[INFO] Installing /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/pom.xml to /home/marcin/.m2/repository/com/example/contract-rest-service/0.0.1-SNAPSHOT/contract-rest-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-service/target/contract-rest-service-0.0.1-SNAPSHOT-stubs.jar to /home/marcin/.m2/repository/com/example/contract-rest-service/0.0.1-SNAPSHOT/contract-rest-service-0.0.1-SNAPSHOT-stubs.jar
+[INFO] 
+[INFO] ------------------< com.example:contract-rest-client >------------------
+[INFO] Building contract-rest-client 0.0.1-SNAPSHOT                       [2/3]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ contract-rest-client ---
+[INFO] Deleting /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-client/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ contract-rest-client ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ contract-rest-client ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-client/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ contract-rest-client ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-client/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ contract-rest-client ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-client/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ contract-rest-client ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running hello.ContractRestClientApplicationTest
+18:10:12.735 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class hello.ContractRestClientApplicationTest]
+18:10:12.753 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+18:10:12.759 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+18:10:12.772 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [hello.ContractRestClientApplicationTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+18:10:12.782 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [hello.ContractRestClientApplicationTest], using SpringBootContextLoader
+18:10:12.785 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [hello.ContractRestClientApplicationTest]: class path resource [hello/ContractRestClientApplicationTest-context.xml] does not exist
+18:10:12.786 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [hello.ContractRestClientApplicationTest]: class path resource [hello/ContractRestClientApplicationTestContext.groovy] does not exist
+18:10:12.786 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [hello.ContractRestClientApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+18:10:12.787 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [hello.ContractRestClientApplicationTest]: ContractRestClientApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:10:12.817 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [hello.ContractRestClientApplicationTest]
+18:10:12.867 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-client/target/classes/hello/ContractRestClientApplication.class]
+18:10:12.873 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration hello.ContractRestClientApplication for test class hello.ContractRestClientApplicationTest
+18:10:12.934 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [hello.ContractRestClientApplicationTest]: using defaults.
+18:10:12.934 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.cloud.contract.stubrunner.provider.wiremock.StubRunnerWireMockTestExecutionListener, org.springframework.cloud.contract.wiremock.WireMockTestExecutionListener]
+18:10:12.942 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+18:10:12.942 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+18:10:12.943 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3eb81efb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1ae8bcbc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6cdba6dc, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7d3d101b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@30c8681, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5cdec700, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6d026701, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@78aa1f72, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1f75a668, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@35399441, org.springframework.cloud.contract.stubrunner.provider.wiremock.StubRunnerWireMockTestExecutionListener@4b7dc788, org.springframework.cloud.contract.wiremock.WireMockTestExecutionListener@6304101a]
+18:10:12.945 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.ContractRestClientApplicationTest]
+18:10:12.945 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.ContractRestClientApplicationTest]
+18:10:12.946 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.ContractRestClientApplicationTest]
+18:10:12.946 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.ContractRestClientApplicationTest]
+18:10:12.947 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.ContractRestClientApplicationTest]
+18:10:12.947 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.ContractRestClientApplicationTest]
+18:10:12.950 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4416d64f testClass = ContractRestClientApplicationTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@6bf08014 testClass = ContractRestClientApplicationTest, locations = '{}', classes = '{class hello.ContractRestClientApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@8317c52, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6f27a732, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@d6e7bab, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3d1cfad4], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+18:10:12.965 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.4.RELEASE)
+
+2019-04-29 18:10:13.223  INFO 20236 --- [           main] hello.ContractRestClientApplicationTest  : Starting ContractRestClientApplicationTest on marcin-Precision-5520 with PID 20236 (started by marcin in /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-client)
+2019-04-29 18:10:13.224  INFO 20236 --- [           main] hello.ContractRestClientApplicationTest  : No active profile set, falling back to default profiles: default
+2019-04-29 18:10:14.896  INFO 20236 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-29 18:10:15.113  INFO 20236 --- [           main] hello.ContractRestClientApplicationTest  : Started ContractRestClientApplicationTest in 2.14 seconds (JVM running for 2.771)
+2019-04-29 18:10:15.141  INFO 20236 --- [           main] o.s.c.c.s.AetherStubDownloaderBuilder    : Will download stubs and contracts via Aether
+2019-04-29 18:10:15.147  INFO 20236 --- [           main] o.s.c.c.stubrunner.AetherStubDownloader  : Remote repos not passed but the switch to work offline was set. Stubs will be used from your local Maven repository.
+2019-04-29 18:10:15.270  INFO 20236 --- [           main] o.s.c.c.stubrunner.AetherStubDownloader  : Resolved version is [0.0.1-SNAPSHOT]
+2019-04-29 18:10:15.281  INFO 20236 --- [           main] o.s.c.c.stubrunner.AetherStubDownloader  : Resolved artifact [com.example:contract-rest-service:jar:stubs:0.0.1-SNAPSHOT] to /home/marcin/.m2/repository/com/example/contract-rest-service/0.0.1-SNAPSHOT/contract-rest-service-0.0.1-SNAPSHOT-stubs.jar
+2019-04-29 18:10:15.282  INFO 20236 --- [           main] o.s.c.c.stubrunner.AetherStubDownloader  : Unpacking stub from JAR [URI: file:/home/marcin/.m2/repository/com/example/contract-rest-service/0.0.1-SNAPSHOT/contract-rest-service-0.0.1-SNAPSHOT-stubs.jar]
+2019-04-29 18:10:15.284  INFO 20236 --- [           main] o.s.c.c.stubrunner.AetherStubDownloader  : Unpacked file to [/tmp/contracts7251168012877971645]
+2019-04-29 18:10:16.034  INFO 20236 --- [           main] wiremock.org.eclipse.jetty.util.log      : Logging initialized @3691ms
+2019-04-29 18:10:16.100  INFO 20236 --- [           main] w.org.eclipse.jetty.server.Server        : jetty-9.2.z-SNAPSHOT
+2019-04-29 18:10:16.116  INFO 20236 --- [           main] w.o.e.j.server.handler.ContextHandler    : Started w.o.e.j.s.ServletContextHandler@2e1ba142{/__admin,null,AVAILABLE}
+2019-04-29 18:10:16.117  INFO 20236 --- [           main] w.o.e.j.server.handler.ContextHandler    : Started w.o.e.j.s.ServletContextHandler@797f97e3{/,null,AVAILABLE}
+2019-04-29 18:10:16.129  INFO 20236 --- [           main] w.o.e.j.s.NetworkTrafficServerConnector  : Started NetworkTrafficServerConnector@29aa4bc9{HTTP/1.1}{0.0.0.0:8100}
+2019-04-29 18:10:16.130  INFO 20236 --- [           main] w.org.eclipse.jetty.server.Server        : Started @3788ms
+2019-04-29 18:10:16.130  INFO 20236 --- [           main] o.s.c.contract.stubrunner.StubServer     : Started stub server for project [com.example:contract-rest-service:0.0.1-SNAPSHOT:stubs] on port 8100
+2019-04-29 18:10:16.481  INFO 20236 --- [qtp471395945-26] /__admin                                 : RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+2019-04-29 18:10:16.502  INFO 20236 --- [qtp471395945-26] WireMock                                 : Admin request received:
+127.0.0.1 - POST /mappings
+
+Connection: [keep-alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/11.0.2)]
+Host: [localhost:8100]
+Content-Length: [225]
+Content-Type: [text/plain; charset=UTF-8]
+{
+  "id" : "9a064ac9-bb7d-437a-b239-323bf4a08dec",
+  "request" : {
+    "url" : "/ping",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "OK"
+  },
+  "uuid" : "9a064ac9-bb7d-437a-b239-323bf4a08dec"
+}
+
+2019-04-29 18:10:16.599  INFO 20236 --- [qtp471395945-27] WireMock                                 : Admin request received:
+127.0.0.1 - POST /mappings
+
+Connection: [keep-alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/11.0.2)]
+Host: [localhost:8100]
+Content-Length: [227]
+Content-Type: [text/plain; charset=UTF-8]
+{
+  "id" : "63f58a94-5460-4dea-af48-8c1b7b8d7cc6",
+  "request" : {
+    "url" : "/health",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "OK"
+  },
+  "uuid" : "63f58a94-5460-4dea-af48-8c1b7b8d7cc6"
+}
+
+2019-04-29 18:10:16.640  INFO 20236 --- [qtp471395945-28] WireMock                                 : Admin request received:
+127.0.0.1 - POST /mappings
+
+Connection: [keep-alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/11.0.2)]
+Host: [localhost:8100]
+Content-Length: [387]
+Content-Type: [text/plain; charset=UTF-8]
+{
+  "id" : "aae6d3a3-70de-4a5d-9508-8793e293f048",
+  "request" : {
+    "url" : "/person/1",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"surname\":\"bee\",\"name\":\"foo\",\"id\":1}",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "aae6d3a3-70de-4a5d-9508-8793e293f048"
+}
+
+2019-04-29 18:10:16.693  INFO 20236 --- [           main] o.s.c.c.stubrunner.StubRunnerExecutor    : All stubs are now running RunningStubs [namesAndPorts={com.example:contract-rest-service:0.0.1-SNAPSHOT:stubs=8100}]
+2019-04-29 18:10:16.975  INFO 20236 --- [qtp471395945-29] /                                        : RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+2019-04-29 18:10:17.041  INFO 20236 --- [qtp471395945-29] WireMock                                 : Request received:
+127.0.0.1 - GET /person/1
+
+User-Agent: [Java/11.0.2]
+Connection: [keep-alive]
+Host: [localhost:8100]
+Accept: [application/json, application/*+json]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "body" : "{\"surname\":\"bee\",\"name\":\"foo\",\"id\":1}",
+  "headers" : {
+    "Content-Type" : "application/json"
+  },
+  "transformers" : [ "response-template" ]
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [aae6d3a3-70de-4a5d-9508-8793e293f048]
+
+
+2019-04-29 18:10:17.093  INFO 20236 --- [           main] w.o.e.j.s.NetworkTrafficServerConnector  : Stopped NetworkTrafficServerConnector@29aa4bc9{HTTP/1.1}{0.0.0.0:8100}
+2019-04-29 18:10:17.094  INFO 20236 --- [           main] w.o.e.j.server.handler.ContextHandler    : Stopped w.o.e.j.s.ServletContextHandler@797f97e3{/,null,UNAVAILABLE}
+2019-04-29 18:10:17.094  INFO 20236 --- [           main] w.o.e.j.server.handler.ContextHandler    : Stopped w.o.e.j.s.ServletContextHandler@2e1ba142{/__admin,null,UNAVAILABLE}
+2019-04-29 18:10:17.095  WARN 20236 --- [           main] w.o.e.j.util.thread.QueuedThreadPool     : qtp471395945{STOPPING,8<=8<=10,i=8,q=8} Couldn't stop Thread[qtp471395945-24,5,main]
+2019-04-29 18:10:17.095  WARN 20236 --- [           main] w.o.e.j.util.thread.QueuedThreadPool     : qtp471395945{STOPPING,8<=8<=10,i=0,q=6} Couldn't stop Thread[qtp471395945-29,5,]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.473 s - in hello.ContractRestClientApplicationTest
+2019-04-29 18:10:17.113  INFO 20236 --- [       Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ contract-rest-client ---
+[INFO] Building jar: /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-client/target/contract-rest-client-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.4.RELEASE:repackage (repackage) @ contract-rest-client ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ contract-rest-client ---
+[INFO] Installing /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-client/target/contract-rest-client-0.0.1-SNAPSHOT.jar to /home/marcin/.m2/repository/com/example/contract-rest-client/0.0.1-SNAPSHOT/contract-rest-client-0.0.1-SNAPSHOT.jar
+[INFO] Installing /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/contract-rest-client/pom.xml to /home/marcin/.m2/repository/com/example/contract-rest-client/0.0.1-SNAPSHOT/contract-rest-client-0.0.1-SNAPSHOT.pom
+[INFO] 
+[INFO] ----------------< org.springframework:gs-contract-rest >----------------
+[INFO] Building gs-contract-rest 0.1.0                                    [3/3]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ gs-contract-rest ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ gs-contract-rest ---
+[INFO] Installing /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/complete/pom.xml to /home/marcin/.m2/repository/org/springframework/gs-contract-rest/0.1.0/gs-contract-rest-0.1.0.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] contract-rest-service 0.0.1-SNAPSHOT ............... SUCCESS [  7.179 s]
+[INFO] contract-rest-client 0.0.1-SNAPSHOT ................ SUCCESS [  5.964 s]
+[INFO] gs-contract-rest 0.1.0 ............................. SUCCESS [  0.049 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 14.468 s
+[INFO] Finished at: 2019-04-29T18:10:17+04:00
+[INFO] ------------------------------------------------------------------------
+> Task :contract-rest-client:compileJava UP-TO-DATE
+> Task :contract-rest-client:processResources UP-TO-DATE
+> Task :contract-rest-client:classes UP-TO-DATE
+> Task :contract-rest-client:bootJar UP-TO-DATE
+> Task :contract-rest-client:jar SKIPPED
+> Task :contract-rest-client:assemble UP-TO-DATE
+> Task :contract-rest-client:compileTestJava UP-TO-DATE
+> Task :contract-rest-client:processTestResources NO-SOURCE
+> Task :contract-rest-client:testClasses UP-TO-DATE
+> Task :contract-rest-client:test UP-TO-DATE
+> Task :contract-rest-client:check UP-TO-DATE
+> Task :contract-rest-client:build UP-TO-DATE
+> Task :contract-rest-service:compileJava UP-TO-DATE
+> Task :contract-rest-service:compileGroovy NO-SOURCE
+> Task :contract-rest-service:processResources UP-TO-DATE
+> Task :contract-rest-service:classes UP-TO-DATE
+> Task :contract-rest-service:bootJar UP-TO-DATE
+> Task :contract-rest-service:jar SKIPPED
+> Task :contract-rest-service:copyContracts
+> Task :contract-rest-service:generateClientStubs
+> Task :contract-rest-service:verifierStubsJar
+> Task :contract-rest-service:assemble
+> Task :contract-rest-service:generateContractTests
+> Task :contract-rest-service:compileTestJava UP-TO-DATE
+> Task :contract-rest-service:compileTestGroovy NO-SOURCE
+> Task :contract-rest-service:processTestResources UP-TO-DATE
+> Task :contract-rest-service:testClasses UP-TO-DATE
+> Task :contract-rest-service:test UP-TO-DATE
+> Task :contract-rest-service:check
+> Task :contract-rest-service:build
+
+BUILD SUCCESSFUL in 1s
+15 actionable tasks: 4 executed, 11 up-to-date
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] contract-rest-service                                              [jar]
+[INFO] contract-rest-client                                               [jar]
+[INFO] gs-contract-rest                                                   [pom]
+[INFO] 
+[INFO] -----------------< com.example:contract-rest-service >------------------
+[INFO] Building contract-rest-service 0.0.1-SNAPSHOT                      [1/3]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ contract-rest-service ---
+[INFO] Deleting /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/initial/contract-rest-service/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ contract-rest-service ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ contract-rest-service ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 4 source files to /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/initial/contract-rest-service/target/classes
+[INFO] 
+[INFO] ------------------< com.example:contract-rest-client >------------------
+[INFO] Building contract-rest-client 0.0.1-SNAPSHOT                       [2/3]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ contract-rest-client ---
+[INFO] Deleting /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/initial/contract-rest-client/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ contract-rest-client ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ contract-rest-client ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/initial/contract-rest-client/target/classes
+[INFO] 
+[INFO] ----------------< org.springframework:gs-contract-rest >----------------
+[INFO] Building gs-contract-rest 0.1.0                                    [3/3]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ gs-contract-rest ---
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] contract-rest-service 0.0.1-SNAPSHOT ............... SUCCESS [  1.090 s]
+[INFO] contract-rest-client 0.0.1-SNAPSHOT ................ SUCCESS [  0.288 s]
+[INFO] gs-contract-rest 0.1.0 ............................. SUCCESS [  0.020 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.764 s
+[INFO] Finished at: 2019-04-29T18:10:22+04:00
+[INFO] ------------------------------------------------------------------------
+> Task :contract-rest-client:compileJava UP-TO-DATE
+> Task :contract-rest-service:compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 0s
+2 actionable tasks: 2 up-to-date
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ spring-guides ---
+[INFO] Installing /home/marcin/repo/spring-cloud-contract/guides/gs-contract-rest/interpolated-pom.xml to /home/marcin/.m2/repository/org/springframework/guide/spring-guides/1.0.0.BUILD-SNAPSHOT/spring-guides-1.0.0.BUILD-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 21.726 s
+[INFO] Finished at: 2019-04-29T18:10:23+04:00
+[INFO] ------------------------------------------------------------------------
+[WARNING] The requested profile "spring" could not be activated because it does not exist.
