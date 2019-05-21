@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cloud.contract.stubrunner.junit.StubRunnerRule;
 import org.springframework.cloud.contract.stubrunner.spring.AutoConfigureStubRunner;
+import org.springframework.cloud.contract.stubrunner.spring.StubRunnerProperties;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestTemplate;
@@ -15,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootTest
 @AutoConfigureStubRunner(
 		ids = "com.example:contract-rest-service:0.0.1-SNAPSHOT:stubs:8100",
-		workOffline = true
+		stubsMode = StubRunnerProperties.StubsMode.LOCAL
 )
 public class ContractRestClientApplicationTest {
 
