@@ -1,7 +1,7 @@
 sudo: false
 language: java
 jdk:
-- oraclejdk8
+- oraclejdk9
 script:
 - export JAVA_OPTS="-Xms1024m -Xmx1024m" && ./mvnw clean install
 notifications:
