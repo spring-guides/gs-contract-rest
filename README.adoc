@@ -40,14 +40,14 @@ include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/
 
 `contract-rest-service/build.gradle`
 // AsciiDoc source formatting doesn't support groovy, so using java instead
-[source,java]
+[source,java,tabsize=2]
 ----
 include::https://raw.githubusercontent.com/spring-guides/{project_id}/master/initial/contract-rest-service/build.gradle[]
 ----
 
 `contract-rest-client/build.gradle`
 // AsciiDoc source formatting doesn't support groovy, so using java instead
-[source,java]
+[source,java,tabsize=2]
 ----
 include::https://raw.githubusercontent.com/spring-guides/{project_id}/master/initial/contract-rest-client/build.gradle[]
 ----
@@ -91,7 +91,7 @@ include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/
 You'll first need to create the service which produces the contract. This is a regular Spring Boot application providing a very simple REST service. The rest service simply returns a `Person` object in JSON.
 
 `contract-rest-service/src/main/java/hello/ContractRestServiceApplication.java`
-[source,java]
+[source,java,tabsize=2]
 ----
 include::complete/contract-rest-service/src/main/java/hello/ContractRestServiceApplication.java[]
 ----
@@ -101,7 +101,7 @@ include::complete/contract-rest-service/src/main/java/hello/ContractRestServiceA
 The contract of the REST service can be defined as a `.groovy` script. This contract specifies that if there is a `GET` request to url `/person/1`, sample data `id=1`, `name=foo` and `surname=bee` representing a `Person` entity will be returned in the response body of content-type `application/json` .
 
 `contract-rest-service/src/test/resources/contracts/hello/find_person_by_id.groovy`
-[source,java]
+[source,java,tabsize=2]
 ----
 include::complete/contract-rest-service/src/test/resources/contracts/hello/find_person_by_id.groovy[]
 ----
@@ -121,7 +121,7 @@ At the `test` phase, automatic test classes will be created for the contract spe
 ----
 
 `contract-rest-service/src/test/java/hello/BaseClass.java`
-[source,java]
+[source,java,tabsize=2]
 ----
 include::complete/contract-rest-service/src/test/java/hello/BaseClass.java[]
 ----
@@ -132,21 +132,21 @@ At this step, when the tests are executed, test results should be GREEN indicati
 
 Model class `Person.java`
 `contract-rest-service/src/main/java/hello/Person.java`
-[source,java]
+[source,java,tabsize=2]
 ----
 include::complete/contract-rest-service/src/main/java/hello/Person.java[]
 ----
 
 Service bean `PersonService.java` which just populates a few Person entity in memory and returns the one when asked.
 `contract-rest-service/src/main/java/hello/PersonService.java`
-[source,java]
+[source,java,tabsize=2]
 ----
 include::complete/contract-rest-service/src/main/java/hello/PersonService.java[]
 ----
 
 RestController bean `PersonRestController.java` which calls `PersonService` bean when a REST request is received for a person with the id.
 `contract-rest-service/src/main/java/hello/PersonRestController.java`
-[source,java]
+[source,java,tabsize=2]
 ----
 include::complete/contract-rest-service/src/main/java/hello/PersonRestController.java[]
 ----
@@ -162,7 +162,7 @@ Visit the service in the browser `http://localhost:8000/person/1`, `http://local
 With the contract producer service ready, now we  need to crate the client application which consumes the contract provided. This is a regular Spring Boot application providing a very simple REST service. The rest service simply returns a message with the queried Person's name, e.g. `Hello Anna`.
 
 `contract-rest-client/src/main/java/hello/ContractRestClientApplication.java`
-[source,java]
+[source,java,tabsize=2]
 ----
 include::complete/contract-rest-client/src/main/java/hello/ContractRestClientApplication.java[]
 ----
@@ -172,7 +172,7 @@ include::complete/contract-rest-client/src/main/java/hello/ContractRestClientApp
 The contract provided by the producer should be consumed as a simple Spring test.
 
 `contract-rest-client/src/test/java/hello/ContractRestClientApplicationTest.java`
-[source,java]
+[source,java,tabsize=2]
 ----
 include::complete/contract-rest-client/src/test/java/hello/ContractRestClientApplicationTest.java[]
 ----
