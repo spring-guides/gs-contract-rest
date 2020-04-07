@@ -159,7 +159,7 @@ Visit the service in the browser `http://localhost:8000/person/1`, `http://local
 
 == Create contract consumer service
 
-With the contract producer service ready, now we  need to crate the client application which consumes the contract provided. This is a regular Spring Boot application providing a very simple REST service. The rest service simply returns a message with the queried Person's name, e.g. `Hello Anna`.
+With the contract producer service ready, now we  need to create the client application which consumes the contract provided. This is a regular Spring Boot application providing a very simple REST service. The rest service simply returns a message with the queried Person's name, e.g. `Hello Anna`.
 
 `contract-rest-client/src/main/java/hello/ContractRestClientApplication.java`
 [source,java,tabsize=2]
