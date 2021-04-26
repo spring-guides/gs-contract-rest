@@ -19,9 +19,9 @@ You'll setup two micro services one providing its contract, and the other one co
 == What you'll need
 
 :java_version: 1.8
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/prereq_editor_jdk_buildtools.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/prereq_editor_jdk_buildtools.adoc[]
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/how_to_complete_this_guide.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/how_to_complete_this_guide.adoc[]
 
 
 [[reveal-gradle]]
@@ -32,27 +32,27 @@ include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/
 [.use-gradle]
 == Build with Gradle
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/build_system_intro.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/build_system_intro.adoc[]
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/create_directory_structure_hello.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/create_directory_structure_hello.adoc[]
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/create_both_builds.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/create_both_builds.adoc[]
 
 `contract-rest-service/build.gradle`
 // AsciiDoc source formatting doesn't support groovy, so using java instead
 [source,java,tabsize=2]
 ----
-include::https://raw.githubusercontent.com/spring-guides/{project_id}/master/initial/contract-rest-service/build.gradle[]
+include::https://raw.githubusercontent.com/spring-guides/{project_id}/main/initial/contract-rest-service/build.gradle[]
 ----
 
 `contract-rest-client/build.gradle`
 // AsciiDoc source formatting doesn't support groovy, so using java instead
 [source,java,tabsize=2]
 ----
-include::https://raw.githubusercontent.com/spring-guides/{project_id}/master/initial/contract-rest-client/build.gradle[]
+include::https://raw.githubusercontent.com/spring-guides/{project_id}/main/initial/contract-rest-client/build.gradle[]
 ----
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/spring-boot-gradle-plugin.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/spring-boot-gradle-plugin.adoc[]
 
 [[reveal-maven]]
 [.reveal-maven]
@@ -62,27 +62,27 @@ include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/
 [.use-maven]
 == Build with Maven
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/build_system_intro_maven.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/build_system_intro_maven.adoc[]
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/create_directory_structure_hello.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/create_directory_structure_hello.adoc[]
 
 To get you started quickly, here are the complete configurations for the server and client applications:
 
 `contract-rest-service/pom.xml`
 [source,xml]
 ----
-include::https://raw.githubusercontent.com/spring-guides/{project_id}/master/initial/contract-rest-service/pom.xml[]
+include::https://raw.githubusercontent.com/spring-guides/{project_id}/main/initial/contract-rest-service/pom.xml[]
 ----
 
 `contract-rest-client/pom.xml`
 [source,xml]
 ----
-include::https://raw.githubusercontent.com/spring-guides/{project_id}/master/initial/contract-rest-client/pom.xml[]
+include::https://raw.githubusercontent.com/spring-guides/{project_id}/main/initial/contract-rest-client/pom.xml[]
 ----
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/spring-boot-maven-plugin.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/spring-boot-maven-plugin.adoc[]
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/hide-show-sts.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/hide-show-sts.adoc[]
 
 
 [[initial]]
@@ -200,4 +200,4 @@ The following guides may also be helpful:
 * https://spring.io/guides/gs/spring-boot/[Building an Application with Spring Boot]
 * https://spring.io/guides/gs/multi-module/[Creating a Multi Module Project]
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/footer.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/footer.adoc[]
