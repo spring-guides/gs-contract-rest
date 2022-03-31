@@ -106,7 +106,9 @@ The contract of the REST service can be defined as a `.groovy` script. This cont
 include::complete/contract-rest-service/src/test/resources/contracts/hello/find_person_by_id.groovy[]
 ----
 
-At the `test` phase, automatic test classes will be created for the contract specified in the groovy file. The auto generated test java classes will extend the `hello.BaseClass`.
+At the `test` phase, automatic test classes will be created for the contract specified in the groovy file. This is done by the build plugin `org.springframework.cloud:spring-cloud-contract-gradle-plugin` in Gradle or `org.springframework.cloud:spring-cloud-contract-maven-plugin` in Maven respectively. The auto generated test java classes will extend the `hello.BaseClass`.
+
+To include the plugin in Maven, you need to add the following:
 [source,xml]
 ----
 	<plugin>
@@ -119,6 +121,10 @@ At the `test` phase, automatic test classes will be created for the contract spe
 		</configuration>
 	</plugin>
 ----
+
+For running the tests, you also need to include the `org.springframework.cloud:spring-cloud-starter-contract-verifier` dependency in the test scope.
+
+Finally, create the base-class for testing:
 
 `contract-rest-service/src/test/java/hello/BaseClass.java`
 [source,java,tabsize=2]
