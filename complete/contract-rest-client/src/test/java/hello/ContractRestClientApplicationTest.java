@@ -2,22 +2,18 @@ package hello;
 
 import org.assertj.core.api.BDDAssertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.RegisterExtension;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.cloud.contract.stubrunner.junit.StubRunnerExtension;
+import org.springframework.cloud.contract.stubrunner.spring.AutoConfigureStubRunner;
 import org.springframework.cloud.contract.stubrunner.spring.StubRunnerProperties;
 import org.springframework.http.ResponseEntity;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootTest
+@AutoConfigureStubRunner(
+		ids = "com.example:contract-rest-service:0.0.1-SNAPSHOT:stubs:8100",
+		stubsMode = StubRunnerProperties.StubsMode.LOCAL
+)
 public class ContractRestClientApplicationTest {
-
-	@RegisterExtension
-	public StubRunnerExtension stubRunner = new StubRunnerExtension()
-		.downloadStub("com.example", "contract-rest-service", "0.0.1-SNAPSHOT", "stubs")
-		.withPort(8100)
-		.stubsMode(StubRunnerProperties.StubsMode.LOCAL);
 
 	@Test
 	public void get_person_from_service_contract() {
