@@ -1,7 +1,7 @@
 buildscript {
 	ext {
-		springBootVersion = '2.7.1'
-		verifierVersion = '3.1.3'
+		springBootVersion = '3.1.2'
+		verifierVersion = '4.0.4'
 	}
 	repositories { mavenCentral() }
 	dependencies {
@@ -23,10 +23,10 @@ apply plugin: 'spring-cloud-contract'
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 bootJar {
-	baseName = 'contract-rest-service'
+	archiveFileName = 'contract-rest-service'
 }
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 17
+targetCompatibility = 17
 
 repositories { mavenCentral() }
 
@@ -38,11 +38,14 @@ dependencies {
 
 dependencyManagement {
 	imports {
-		mavenBom "org.springframework.cloud:spring-cloud-dependencies:2021.0.3"
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:2022.0.4"
 	}
 }
 
 contracts {
+	// To have the same contract folder as Maven. In Gradle would default to
+	// src/contractTest/resources/contracts
+	contractsDslDir = file("src/test/resources/contracts")
 	packageWithBaseClasses = 'hello'
 	baseClassMappings {
 		baseClassMapping(".*hello.*", "hello.BaseClass")
