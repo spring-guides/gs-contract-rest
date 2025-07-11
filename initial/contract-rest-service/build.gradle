@@ -1,32 +1,18 @@
-buildscript {
-	ext {
-		springBootVersion = '3.3.0'
-		verifierVersion = '4.0.4'
-	}
-	repositories { mavenCentral() }
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-		classpath "org.springframework.cloud:spring-cloud-contract-gradle-plugin:${verifierVersion}"
-	}
+plugins {
+	id 'org.springframework.boot' version '3.5.8'
+	id 'org.springframework.cloud.contract' version '4.3.0'
+	id 'io.spring.dependency-management' version '1.1.5'
+	id 'java'
 }
 
-apply plugin: 'groovy'
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
-apply plugin: 'spring-cloud-contract'
-
-
-bootJar {
-	archiveFileName = 'contract-rest-service'
-	version = '0.0.1-SNAPSHOT'
-}
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 17
 targetCompatibility = 17
 
-repositories { mavenCentral() }
+repositories {
+	mavenCentral()
+}
 
 dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-web')
@@ -36,7 +22,7 @@ dependencies {
 
 dependencyManagement {
 	imports {
-		mavenBom "org.springframework.cloud:spring-cloud-dependencies:2022.0.4"
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:2025.0.0"
 	}
 }
 
