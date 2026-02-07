@@ -21,6 +21,7 @@ dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-web')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	testImplementation('org.springframework.cloud:spring-cloud-starter-contract-verifier')
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 dependencyManagement {
@@ -39,6 +40,10 @@ contracts {
 	}
 }
 
-contractTest {
+tasks.named('contractTest') {
 	useJUnitPlatform()
+}
+
+tasks.named('test') {
+	failOnNoDiscoveredTests = false
 }

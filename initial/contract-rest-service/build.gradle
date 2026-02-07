@@ -21,6 +21,7 @@ dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-web')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	testImplementation('org.springframework.cloud:spring-cloud-starter-contract-verifier')
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 dependencyManagement {
@@ -29,16 +30,11 @@ dependencyManagement {
 	}
 }
 
+copyContracts.enabled = false
 contracts {
-	// To have the same contract folder as Maven. In Gradle would default to
-	// src/contractTest/resources/contracts
-	contractsDslDir = file("src/test/resources/contracts")
-	packageWithBaseClasses = 'hello'
-	baseClassMappings {
-		baseClassMapping(".*hello.*", "hello.BaseClass")
-	}
+	failOnNoContracts = false
 }
 
-contractTest {
+tasks.named('contractTest') {
 	useJUnitPlatform()
 }
